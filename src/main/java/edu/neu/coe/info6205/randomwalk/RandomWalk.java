@@ -3,6 +3,7 @@
  */
 
 package edu.neu.coe.info6205.randomwalk;
+
 import java.util.Random;
 
 public class RandomWalk {
@@ -20,8 +21,6 @@ public class RandomWalk {
      */
     private void move(int dx, int dy) {
         // TO BE IMPLEMENTED
-        x = x + dx;
-        y = y + dy;
     }
 
     /**
@@ -31,11 +30,6 @@ public class RandomWalk {
      */
     private void randomWalk(int m) {
         // TO BE IMPLEMENTED
-        while(m > 0)
-        {
-            randomMove();
-            m = m - 1;
-        }
     }
 
     /**
@@ -55,8 +49,7 @@ public class RandomWalk {
      */
     public double distance() {
         // TO BE IMPLEMENTED
-        double ds = Math.sqrt(Math.pow(x,2) + Math.pow(y,2));
-        return ds;
+        return 0;
     }
 
     /**
@@ -77,7 +70,6 @@ public class RandomWalk {
     }
 
     public static void main(String[] args) {
-/*
         if (args.length == 0)
             throw new RuntimeException("Syntax: RandomWalk steps [experiments]");
         int m = Integer.parseInt(args[0]);
@@ -85,16 +77,6 @@ public class RandomWalk {
         if (args.length > 1) n = Integer.parseInt(args[1]);
         double meanDistance = randomWalkMulti(m, n);
         System.out.println(m + " steps: " + meanDistance + " over " + n + " experiments");
-*/
-        int n = 100;
-        int m = 1;
-        for(int i = 1; i < 11; i++) {
-            m = 10 * m;
-            for (int j = 0; j < 10; j++) {
-                double meanDistance = randomWalkMulti(m, n);
-                System.out.println(m + " steps: " + meanDistance + " over " + n + " experiments");
-            }
-        }
-
     }
+
 }
